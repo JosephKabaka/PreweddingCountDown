@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="nav">
+        <h4>LILY&ANDREW</h4>
+        <button>
+            CONTACT US
+        </button>
+    </div>
+    <div class="body">
+        <h6>A NEW JOURNEY AWAITS</h6>
+        <h2>PRE-WEDDING</h2>
+        <div class="DateContainer">
+            <div class="center">
+            <div class="days">
+             <div class="dateNo">
+                <p id="days"></p>
+             </div>
+             <div class="dateText">
+                DAYS
+             </div>
+            </div>
+            <div class="hours">
+                <div class="dateNo">
+                    <p id="hours"></p>
+                 </div>
+                 <div class="dateText">
+                    HOURS
+                 </div>
+    
+            </div>
+            <div class="minutes">
+                <div class="dateNo">
+                   <p id="minutes"></p> 
+                 </div>
+                 <div class="dateText">
+                    MINUTES
+                 </div>
+    
+            </div>
+            <div class="seconds">
+                <div class="dateNo">
+                    <p id="seconds"></p>
+                 </div>
+                 <div class="dateText">
+                    SECONDS
+                 </div>
+    
+            </div>
+            <script>
+                const weddingDay= new Date("December 19 , 2024 00:00:00").getTime();
+    
+                const countDown=setInterval(function(){
+                    const now=new Date().getTime();
+                    const timeDiff=weddingDay-now;
+    
+                    const days=Math.floor(timeDiff/(1000*60*60*24));
+                    const hours= Math.floor((timeDiff % (1000*60*60*24))/(1000*60*60));
+                    const minutes= Math.floor((timeDiff % (1000*60*60))/(1000*60));
+                    const seconds= Math.floor((timeDiff % (1000*60))/1000);
+                    document.getElementById('days').innerHTML=days;
+                    document.getElementById('hours').innerHTML=hours;
+                    document.getElementById('minutes').innerHTML=minutes;
+                    document.getElementById('seconds').innerHTML=seconds;
+                    if(timeDiff<0){
+                        document.getElementById('comingSoon').innerHTML="This Is The Big Day !"
+                    }
+                },1000);
+            </script>
+        </div>
+        </div>
+        <a href="https://chat.whatsapp.com/LW4Z9OyKz3RHPq59XPxXhP" target="_blank">
+            <button> CONTRIBUTE <i class="fa-solid fa-arrow-right fa-fade"></i> </button>
+        </a>
+    </div>
+    
+</body>
+<script src="index.js"></script>
+</html>
