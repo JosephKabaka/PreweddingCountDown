@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,7 +24,7 @@
         <h2>PRE-WEDDING</h2>
         <div class="DateContainer">
             <div class="center">
-            <div class="days">
+            <div class="days" data-aos="fade-down" data-aos-duration="2000">
              <div class="dateNo">
                 <p id="days"></p>
              </div>
@@ -30,7 +32,7 @@
                 DAYS
              </div>
             </div>
-            <div class="hours">
+            <div class="hours" data-aos="fade-down" data-aos-duration="2000">
                 <div class="dateNo">
                     <p id="hours"></p>
                  </div>
@@ -39,7 +41,7 @@
                  </div>
     
             </div>
-            <div class="minutes">
+            <div class="minutes" data-aos="fade-right" data-aos-duration="2000">
                 <div class="dateNo">
                    <p id="minutes"></p> 
                  </div>
@@ -48,7 +50,7 @@
                  </div>
     
             </div>
-            <div class="seconds">
+            <div class="seconds" data-aos="fade-left" data-aos-duration="2000">
                 <div class="dateNo">
                     <p id="seconds"></p>
                  </div>
@@ -86,4 +88,7 @@
     
 </body>
 <script src="index.js"></script>
+<script>
+    AOS.init();
+  </script>
 </html>
